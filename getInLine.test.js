@@ -10,6 +10,10 @@ describe("getInLine", () => {
   });
 
   test("2s are bumped to the front of the queue before your wait time is calculated", () => {
-    expect(getInLine([4, 0, 2])).toEqual(3);
+    expect(getInLine([4, 0, 2, 2])).toEqual(4);
+  });
+
+  test("a 1 is not counted in the queue and its presence induces an array swap before wait time is calculated", () => {
+    expect(getInLine([4, 0, 1])).toEqual(1);
   });
 });
