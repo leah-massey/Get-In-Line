@@ -1,5 +1,10 @@
 function getInLine(arr) {
-  let waitTime = arr.indexOf(0) + 1;
+  const member = 2;
+  const orderedArray = arr.sort(function (x, y) {
+    return x == member ? -1 : y == member ? 1 : 0;
+  });
+
+  let waitTime = orderedArray.indexOf(0) + 1;
 
   return waitTime;
 }
