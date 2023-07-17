@@ -1,7 +1,7 @@
 function getInLine(arr) {
-  let index = arr.indexOf(0);
+  let waitTime = arr.indexOf(0) + 1;
 
-  return index + 1;
+  return waitTime;
 }
 
 module.exports = getInLine;
