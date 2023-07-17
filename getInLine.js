@@ -1,5 +1,7 @@
 function getInLine(arr) {
-  return 1;
+  let index = arr.indexOf(0);
+
+  return index + 1;
 }
 
 module.exports = getInLine;
