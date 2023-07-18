@@ -16,4 +16,8 @@ describe("getInLine", () => {
   test("a 1 is not counted in the queue and its presence induces an array swap before wait time is calculated", () => {
     expect(getInLine([4, 0, 1])).toEqual(1);
   });
+
+  test("multiple 1s in the queue induce multiple swaps in the queue order", () => {
+    expect(getInLine([4, 1, 0, 1])).toEqual(2);
+  });
 });

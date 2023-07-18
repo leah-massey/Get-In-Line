@@ -14,14 +14,28 @@ function getInLine(arr) {
       : 0;
   });
 
-  console.log(orderedArray);
+  const numberKnownGuests = []; // [1,1]
 
-  while (orderedArray[0] === 1) {
+  console.log(orderedArray); //[ 1, 1, 4, 0 ]
+
+  orderedArray.forEach((number) => {
+    if (number === 1) {
+      numberKnownGuests.push(number);
+    }
+  });
+
+  console.log(numberKnownGuests);
+
+  //remove the 1s from the array
+  for (i = 0; i < numberKnownGuests.length; i++) {
     orderedArray.shift();
-    orderedArray.reverse();
   }
 
-  console.log(orderedArray);
+  //reverse the orderedArray back and forth by the numberKnownGuests times
+  for (i = 0; i < numberKnownGuests.length; i++) {
+    orderedArray.reverse();
+    console.log(orderedArray);
+  }
 
   let waitTime = orderedArray.indexOf(0) + 1;
 
