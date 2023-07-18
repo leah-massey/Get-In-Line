@@ -20,4 +20,8 @@ describe("getInLine", () => {
   test("multiple 1s in the queue induce multiple swaps in the queue order", () => {
     expect(getInLine([4, 1, 0, 1])).toEqual(2);
   });
+
+  test("2s are not immune to swapping", () => {
+    expect(getInLine([4, 1, 2, 2, 0])).toEqual(1);
+  });
 });
